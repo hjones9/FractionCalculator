@@ -43,8 +43,8 @@ public class Input {
         }else if("b".equalsIgnoreCase(option)){
         firstanswer = FractionMath.multiply(f1, f2);
         }else{ System.out.println("You did not correctly select an option. " +
-                "Therefore, your fractions shall be multiplied.");
-        firstanswer = FractionMath.multiply(f1, f2);
+                "Therefore, your fractions shall be added.");
+        firstanswer = FractionMath.add(f1, f2);
         }
     
     answer = FractionMath.reduce(firstanswer);

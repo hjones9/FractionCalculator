@@ -10,16 +10,15 @@ package rational.number.calculator;
  * @author Hailey.Jones
  */
 public class FractionMath {
-//Hey, fix this to not have in IllegalArgumentException
+
     public static Fraction add(Fraction f1, Fraction f2) {
 
-        if (f1.getDenominator() != f2.getDenominator()) {
-            throw new IllegalArgumentException("Your fraction must have the same "
-                    + "denominators.");
-        }
-
-        int fnumerator = f1.getNumerator() + f2.getNumerator();
-        int fdenominator = f1.getDenominator();
+        int n1Moment = f1.getNumerator() * f2.getDenominator();
+        int d1Moment = f1.getDenominator() * f2.getDenominator();
+        int n2Moment = f2.getNumerator() * f1.getDenominator();
+        
+        int fnumerator = n1Moment + n2Moment;
+        int fdenominator = d1Moment;
 
         return new Fraction(fnumerator, fdenominator);
     }

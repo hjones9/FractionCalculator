@@ -55,7 +55,7 @@ public class Fraction {
         String n = Integer.toString(finalAnswer.getNumerator());
         String d = Integer.toString(finalAnswer.getDenominator());
 
-        if (d.equals(1)) {
+        if (d.equals("1")) {
             return n;
         } else if (this.isZero(finalAnswer)) {
             return "Zero";
