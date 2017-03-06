@@ -17,24 +17,36 @@ public class Input {
     private Fraction answer;
     private Fraction f1;
     private Fraction f2;
-            
+    private String option;
             
     public void input(){
+    System.out.println("Please select the operation you wish to have implimented.");
+    System.out.println("Option a: add");
+    System.out.println("Option b: multiply");
+    option = in.next();
     
-    System.out.println("This is a fraction calculator. It will multiply your fractions.");
     System.out.println("Please enter the first fraction.");
     String user = in.next();
     f1 = this.parse(user);
         
     System.out.println("Please enter the second fraction.");
     user = in.next();
-   f2 = this.parse(user);
+    f2 = this.parse(user);
     
+   
     }
     
     public void compute(){
+        Fraction firstanswer;
+        if("a".equalsIgnoreCase(option)){
+        firstanswer = FractionMath.add(f1, f2);
+        }else if("b".equalsIgnoreCase(option)){
+        firstanswer = FractionMath.multiply(f1, f2);
+        }else{ System.out.println("You did not correctly select an option. " +
+                "Therefore, your fractions shall be multiplied.");
+        firstanswer = FractionMath.multiply(f1, f2);
+        }
     
-    Fraction firstanswer = FractionMath.multiply(f1, f2);
     answer = FractionMath.reduce(firstanswer);
     
     }

@@ -10,7 +10,7 @@ package rational.number.calculator;
  * @author Hailey.Jones
  */
 public class FractionMath {
-
+//Hey, fix this to not have in IllegalArgumentException
     public static Fraction add(Fraction f1, Fraction f2) {
 
         if (f1.getDenominator() != f2.getDenominator()) {
@@ -32,7 +32,6 @@ public class FractionMath {
         return new Fraction(fnumerator, fdenominator);
     }
 
-    //re-set answer. It's only setting this.numerator.
     public static Fraction reduce(Fraction answer) {
         int n = answer.getNumerator();
         int d = answer.getDenominator();
