@@ -17,7 +17,8 @@ public class RationalNumberCalculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        //Add a divide option?
+        //Add a subtract option?
      Input input = new Input();
      input.input();
      input.compute();
